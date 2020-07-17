@@ -33,8 +33,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+
+
 body {
-	line-height: 1;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: ${({ theme }) => theme.colors.secondary};
 }
 
 ol, ul {

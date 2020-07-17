@@ -1,11 +1,12 @@
 import { AppProps } from 'next/app'
 import Theme from '../styles/Theme'
-import { GlobalStyle } from '../styles/GlobalStyle'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Theme>
-      <GlobalStyle />
+      <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+      `}</style>
       <Component {...pageProps} />
     </Theme>
   )
