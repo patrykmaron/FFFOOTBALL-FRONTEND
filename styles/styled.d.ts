@@ -13,5 +13,9 @@ declare module 'styled-components' {
       brightaccent: string
       orange: string
     }
+    sizing: {
+      headerHeight: string
+      sideWidth: string
+    }
   }
 }

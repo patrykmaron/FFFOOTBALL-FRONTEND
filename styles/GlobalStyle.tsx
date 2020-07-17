@@ -37,7 +37,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: ${({ theme }) => theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.background};
+  min-height: 100vh;
 }
 
 ol, ul {

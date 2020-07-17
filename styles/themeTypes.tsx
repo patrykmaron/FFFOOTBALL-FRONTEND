@@ -11,6 +11,10 @@ export const light: DefaultTheme = {
     brightaccent: '#41EAD4',
     orange: '#FF9F1C',
   },
+  sizing: {
+    headerHeight: '65px',
+    sideWidth: '75px',
+  },
 }
 
 // // Dark Theme

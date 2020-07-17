@@ -10,24 +10,6 @@ export default function Home() {
   return (
     <Layout title="FFFootball | Homepage">
       <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
-      <Title>Hello World</Title>
     </Layout>
   )
 }

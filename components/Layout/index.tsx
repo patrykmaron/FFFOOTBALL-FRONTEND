@@ -6,48 +6,77 @@ type Props = {
   title?: string
 }
 
-const SideMenu = styled.nav`
-  background-color: ${({ theme }) => theme.colors.primary};
-  width: 50px;
-  padding: 1rem;
-`
-
-const Main = styled.div`
+const Main = styled.section`
   padding-left: 1rem;
   padding-right: 2rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  flex: 1 auto;
+  min-height: calc(100vh - ${({ theme }) => theme.sizing.headerHeight});
+  @media (max-width: 768px) {
+    min-height: calc(100vh - ${({ theme }) => theme.sizing.headerHeight} * 2);
+  }
 `
 
 const Wrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.background};
   display: flex;
-  min-height: 100vh;
+  flex: 1 auto;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`
+
+const Sidebar = styled.div`
+  order: -1;
+  background-color: ${({ theme }) => theme.colors.primary};
+  height: ${({ theme }) => theme.sizing.headerHeight};
+  @media (min-width: 768px) {
+    flex: 0 ${({ theme }) => theme.sizing.sideWidth};
+    height: unset;
+  }
+`
+
+const Header = styled.header`
+  background-color: black;
+  height: ${({ theme }) => theme.sizing.headerHeight};
+  width: 100%;
+  display: flex;
+  flex: 1 auto;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex: auto;
+  }
 `
-
-const Top = styled.div`
-  height: 100px;
+const MagicBox = styled.div`
+  width: ${({ theme }) => theme.sizing.sideWidth};
+  background-color: ${({ theme }) => theme.colors.primary};
+  @media (max-width: 768px) {
+    width: 0;
+  }
 `
-
-const Bottom = styled.div`
-  flex: 1;
+const HeaderMain = styled.div`
+  backround-color: blue;
+  flex: 1 auto;
+  @media (max-width: 768px) {
+    flex: auto;
+  }
 `
 
 const Layout: React.FC<Props> = ({ children, title = 'Default Title' }) => (
-  <Wrapper>
+  <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <SideMenu></SideMenu>
-    <Main>
-      <Top>1</Top>
-      <Bottom>{children}</Bottom>
-    </Main>
-  </Wrapper>
+    <Header>
+      <MagicBox></MagicBox>
+      <HeaderMain></HeaderMain>
+    </Header>
+    <Wrapper>
+      <Main>{children}</Main>
+      <Sidebar></Sidebar>
+    </Wrapper>
+  </>
 )
 
 export default Layout
