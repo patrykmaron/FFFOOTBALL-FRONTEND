@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Head from 'next/head'
-import { Header, MagicBox, HeaderMain, Wrapper, Main, Sidebar } from './styles'
-import Logo from '../Logo'
+import { Wrapper, Main, Sidebar } from './styles'
+import Header from '../Header'
 
 type Props = {
   title?: string
@@ -14,12 +14,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Default Title' }) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Header>
-      <MagicBox></MagicBox>
-      <HeaderMain>
-        <Logo />
-      </HeaderMain>
-    </Header>
+    <Header />
     <Wrapper>
       <Main>{children}</Main>
       <Sidebar></Sidebar>
