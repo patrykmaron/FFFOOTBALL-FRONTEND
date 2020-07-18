@@ -28,3 +28,15 @@ export const HeaderNav = styled.div`
     flex: auto;
   }
 `
+export const Flexbox = styled.div`
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+`
+export const Account = styled.div`
+  margin-right: 1rem;
+`
+
+export const Nav = styled.nav``
