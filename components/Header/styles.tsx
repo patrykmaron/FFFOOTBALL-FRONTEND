@@ -7,6 +7,7 @@ export const HeaderMain = styled.header`
   display: flex;
   flex: 1 auto;
   flex-direction: row;
+
   @media (max-width: 768px) {
     flex: auto;
   }
@@ -36,7 +37,7 @@ export const Flexbox = styled.div`
   align-items: center;
 `
 export const Account = styled.div`
-  margin-right: 1rem;
+  margin-right: 2rem;
 `
 
 export const Nav = styled.nav``

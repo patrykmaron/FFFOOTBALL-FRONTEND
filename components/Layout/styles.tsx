@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Main = styled.section`
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-right: 2rem;
   flex: 1 auto;
   min-height: calc(100vh - ${({ theme }) => theme.sizing.headerHeight});
