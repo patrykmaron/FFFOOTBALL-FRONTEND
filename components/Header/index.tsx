@@ -1,13 +1,7 @@
 import * as React from 'react'
-import {
-  HeaderMain,
-  MagicBox,
-  HeaderNav,
-  Flexbox,
-  Nav,
-  Account,
-} from './styles'
+import { HeaderMain, MagicBox, HeaderNav, Flexbox, Account } from './styles'
 import Logo from '../Logo'
+import Navmenu from './Navmenu'
 
 const Header: React.FC = () => (
   <>
@@ -16,7 +10,9 @@ const Header: React.FC = () => (
       <HeaderNav>
         <Flexbox>
           <Logo />
-          <Nav>Home Players About Contact</Nav>
+          <Navmenu
+            links={['Scores', 'Schedule', 'Players', 'News', 'Teams', 'Stats']}
+          />
           <Account>Login / Signup</Account>
         </Flexbox>
       </HeaderNav>
