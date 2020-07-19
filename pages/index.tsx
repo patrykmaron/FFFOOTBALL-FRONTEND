@@ -54,7 +54,6 @@ const Card = styled.div`
   backdrop-filter: blur(0.5rem);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
   :hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
@@ -92,20 +91,89 @@ export default function Home() {
             width="170px"
             borderRadius="2rem"
             backgroundColor="linear-gradient(0deg, rgba(0,122,209,0.8127626050420168) 0%, rgba(0,149,255,0.2777485994397759) 100%)"
-          ></Card>
+          >
+            <div
+              style={{
+                position: 'absolute',
+                fontSize: '1.3rem',
+                color: 'white',
+                top: 24,
+                left: 38,
+              }}
+            >
+              Goals
+            </div>
+            <div
+              style={{
+                position: 'absolute',
+                fontSize: '4rem',
+                color: 'white',
+                top: 40,
+                left: 33,
+              }}
+            >
+              46
+            </div>
+          </Card>
 
           <Card
             height="125px"
             width="170px"
             borderRadius="2rem"
             backgroundColor="linear-gradient(0deg, rgba(0,122,209,0.8127626050420168) 0%, rgba(0,149,255,0.2777485994397759) 100%)"
-          ></Card>
+          >
+            <div
+              style={{
+                position: 'absolute',
+                fontSize: '1.3rem',
+                color: 'white',
+                top: 24,
+                left: 38,
+              }}
+            >
+              Assists
+            </div>
+            <div
+              style={{
+                position: 'absolute',
+                fontSize: '4rem',
+                color: 'white',
+                top: 40,
+                left: 33,
+              }}
+            >
+              19
+            </div>
+          </Card>
           <Card
             height="125px"
             width="170px"
             borderRadius="2rem"
             backgroundColor="linear-gradient(0deg, rgba(179,0,25,0.8491771708683473) 0%, rgba(255,30,60,0.6026785714285714) 100%)"
-          ></Card>
+          >
+            <div
+              style={{
+                position: 'absolute',
+                fontSize: '1.3rem',
+                color: 'white',
+                top: 24,
+                left: 38,
+              }}
+            >
+              Minutes
+            </div>
+            <div
+              style={{
+                position: 'absolute',
+                fontSize: '4rem',
+                color: 'white',
+                top: 40,
+                left: 33,
+              }}
+            >
+              987
+            </div>
+          </Card>
           <br />
           <Card
             height="200px"
