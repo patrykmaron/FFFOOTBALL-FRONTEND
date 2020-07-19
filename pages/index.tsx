@@ -9,6 +9,9 @@ type Grid = {
 type Card = {
   height: string
   width: string
+  borderRadius?: string
+  backgroundColor?: string
+  opacity?: string
 }
 
 const Grid = styled.div`
@@ -33,19 +36,22 @@ const HeroTitle = styled.h1`
   font-size: 5rem;
   line-height: 5rem;
   color: ${(props: Grid) => (props.Type === 'subtitle' ? '#F71735' : 'black')};
-
+  text-shadow: 1px 1px #fff;
   margin-top: ${(props: Grid) => (props.Type === 'subtitle' ? '' : '8rem')};
   margin-bottom: ${(props: Grid) => (props.Type === 'title' ? '' : '6rem')};
 `
 const Card = styled.div`
-  background: #fff;
-  border-radius: 2px;
+  background: ${(props: Card) =>
+    props.backgroundColor ? props.backgroundColor : '#fff'};
+  border-radius: ${(props: Card) =>
+    props.borderRadius ? props.borderRadius : '2px'};
   display: inline-block;
   height: ${(props: Card) => props.height};
   width: ${(props: Card) => props.width};
+  opacity: ${(props: Card) => (props.opacity ? props.opacity : '1')};
   margin: 1rem;
   position: relative;
-
+  backdrop-filter: blur(0.5rem);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
@@ -81,11 +87,38 @@ export default function Home() {
           </svg>
           <HeroTitle Type="title">Robert</HeroTitle>
           <HeroTitle Type="subtitle">Lewandowski</HeroTitle>
-          <Card height="150px" width="150px"></Card>
+          <Card
+            height="125px"
+            width="170px"
+            borderRadius="2rem"
+            backgroundColor="linear-gradient(0deg, rgba(0,122,209,0.8127626050420168) 0%, rgba(0,149,255,0.2777485994397759) 100%)"
+          ></Card>
 
-          <Card height="150px" width="150px"></Card>
+          <Card
+            height="125px"
+            width="170px"
+            borderRadius="2rem"
+            backgroundColor="linear-gradient(0deg, rgba(0,122,209,0.8127626050420168) 0%, rgba(0,149,255,0.2777485994397759) 100%)"
+          ></Card>
+          <Card
+            height="125px"
+            width="170px"
+            borderRadius="2rem"
+            backgroundColor="linear-gradient(0deg, rgba(179,0,25,0.8491771708683473) 0%, rgba(255,30,60,0.6026785714285714) 100%)"
+          ></Card>
           <br />
-          <Card height="150px" width="332px"></Card>
+          <Card
+            height="200px"
+            width="300px"
+            borderRadius="2rem"
+            backgroundColor="linear-gradient(0deg, rgba(0,122,209,0.8127626050420168) 0%, rgba(0,149,255,0.2777485994397759) 100%)"
+          ></Card>
+          <Card
+            height="200px"
+            width="300px"
+            borderRadius="2rem"
+            backgroundColor="linear-gradient(0deg, rgba(179,0,25,0.8491771708683473) 0%, rgba(255,30,60,0.6026785714285714) 100%)"
+          ></Card>
         </GridItem>
         <GridItem className="league_table" gridArea="league_table">
           <Card height="90%" width="90%">
